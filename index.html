@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimalist Signup & Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Signup Form -->
+  <div class="form-container" id="signupSection">
+    <h2>Sign Up</h2>
+    <form id="signupForm" autocomplete="off">
+      <div class="form-group">
+        <input type="email" id="email" placeholder="Email">
+        <div class="error" id="emailError"></div>
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" placeholder="Password" autocomplete="new-password">
+        <div class="error" id="passwordError"></div>
+      </div>
+      <div class="form-group">
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" autocomplete="new-password">
+        <div class="error" id="confirmPasswordError"></div>
+      </div>
+      <button type="submit" class="btn">Create Account</button>
+      <p class="small-text">Already have an account? 
+        <a href="#" id="showLogin">Log in</a>
+      </p>
+      <div class="success-message" id="success"></div>
+    </form>
+  </div>
+
+  <!-- Login Form (hidden initially) -->
+  <div class="form-container" id="loginSection" style="display: none;">
+    <h2>Log In</h2>
+    <form id="loginForm" autocomplete="off">
+      <div class="form-group">
+        <input type="email" id="loginEmail" placeholder="Email">
+        <div class="error" id="loginEmailError"></div>
+      </div>
+      <div class="form-group">
+        <input type="password" id="loginPassword" placeholder="Password" autocomplete="new-password">
+        <div class="error" id="loginPasswordError"></div>
+      </div>
+      <button type="submit" class="btn">Log In</button>
+      <p class="small-text">Don’t have an account? 
+        <a href="#" id="showSignup">Sign up</a>
+      </p>
+      <div class="success-message" id="loginSuccess"></div>
+    </form>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
